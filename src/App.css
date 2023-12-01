@@ -1,0 +1,58 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  width: 100vw;
+  
+}
+
+
+.App input[type="text"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 30%;
+}
+
+.App .delete {
+  flex: 1;
+  margin-left: 10px; /* Add margin for some spacing between the input and the button */
+}
+
+.App table {
+  width: 100%;
+  height: 90%;
+  border-collapse: collapse;
+}
+
+.App th, .App td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.App .edit-btn, .App .delete-btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.App .edit-btn {
+  background-color: #4caf50;
+}
+
+.App .delete-btn {
+  background-color: #f44336;
+}
+@media screen and (max-width: 600px) {
+  .App table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .App th, .App td {
+    padding: 10px;
+    text-align: left;
+  }
+}
