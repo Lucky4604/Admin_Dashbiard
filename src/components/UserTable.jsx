@@ -2,7 +2,7 @@ import React from 'react'
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
 
-const UserTable = ({ users, selectedRows, setSelectedRows }) => {
+const UserTable = ({ users, selectedRows, setSelectedRows , editUser, deleteUser}) => {
     const handleCheckboxChange = (id) => {
         setSelectedRows((prevSelectedRows) => {
           if (prevSelectedRows.includes(id)) {
@@ -59,14 +59,12 @@ const UserTable = ({ users, selectedRows, setSelectedRows }) => {
           <td>{user.email}</td>
           <td>{user.role}</td>
           <td>
-            <button className="edit-btn">
-            <FaRegEdit  size='20'/>   
-            </button>
-            <button className="delete-btn">
-            <MdDeleteOutline 
-            size='20'
-            />
-            </button>
+          <button className="edit-btn" onClick={() => editUser(user.id)}>
+                <FaRegEdit  size='20'/>   
+              </button>
+              <button className="delete-btn" onClick={() => deleteUser(user.id)}>
+                <MdDeleteOutline size='20'/>
+              </button>
           </td>
         </tr>
       ))}
